@@ -1,3 +1,5 @@
-# React/Redux/Router Starter Project
+# React-auth
+Starter react app to use authentication
 
-Starter React project to use auth from an external api
+
+IN PROGRESS
