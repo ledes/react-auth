@@ -13,6 +13,7 @@ export default class App extends Component {
       user: {}
     };
     this.handleLogin = this.handleLogin.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   };
 
   componentDidMount() {
@@ -46,6 +47,14 @@ export default class App extends Component {
     })
   };
 
+
+  handleLogout() {
+    this.setState({
+      loggedInStatus: "NOT_LOGGED_IN",
+      user: {}
+    })
+  }
+
   render() {
     return (
       <div className='app'>
@@ -57,6 +66,7 @@ export default class App extends Component {
               render={props => (
                 <Home {...props}
                   handleLogin={this.handleLogin}
+                  handleLogout={this.handleLogout}
                   loggedInStatus={this.state.loggedInStatus} />
               )}
             />
